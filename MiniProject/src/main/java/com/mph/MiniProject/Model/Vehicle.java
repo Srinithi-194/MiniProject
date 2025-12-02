@@ -1,14 +1,13 @@
 package com.mph.MiniProject.Model;
 
+public class Vehicle implements Asset {
 
-public class Vehicle implements Asset{
-
-	private String regNumber;
+    private String regNumber;
     private String brand;
     private double cost;
     private int velocity;
     private int capacity;
-    private int type;
+    private int type; // 1=Petrol, 2=Diesel, 3=CNG
     private double tax;
 
     public Vehicle(String regNumber, String brand, double cost, int velocity, int capacity, int type) {
@@ -18,6 +17,7 @@ public class Vehicle implements Asset{
         this.velocity = velocity;
         this.capacity = capacity;
         this.type = type;
+        this.tax = 0;
     }
 
     @Override
@@ -30,62 +30,12 @@ public class Vehicle implements Asset{
         return tax;
     }
 
-    public double getTax() {
-        return tax;
-	}
-
-	public String getRegNumber() {
-		return regNumber;
-	}
-
-	public void setRegNumber(String regNumber) {
-		this.regNumber = regNumber;
-	}
-
-	public String getBrand() {
-		return brand;
-	}
-
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
-
-	public double getCost() {
-		return cost;
-	}
-
-	public void setCost(double cost) {
-		this.cost = cost;
-	}
-
-	public int getVelocity() {
-		return velocity;
-	}
-
-	public void setVelocity(int velocity) {
-		this.velocity = velocity;
-	}
-
-	public int getCapacity() {
-		return capacity;
-	}
-
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
-	}
-
-	public int getType() {
-		return type;
-	}
-
-	public void setType(int type) {
-		this.type = type;
-	}
-
-	public void setTax(double tax) {
-		this.tax = tax;
-	}
-    
-    
-
+    // Getters
+    public String getRegNumber() { return regNumber; }
+    public String getBrand() { return brand; }
+    public double getCost() { return cost; }
+    public int getVelocity() { return velocity; }
+    public int getCapacity() { return capacity; }
+    public int getType() { return type; }
+    public double getTax() { return tax; }
 }
